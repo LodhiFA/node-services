@@ -98,6 +98,54 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./routes/api/auth.ts":
+/*!****************************!*\
+  !*** ./routes/api/auth.ts ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n\nvar authRoute = express__WEBPACK_IMPORTED_MODULE_0___default.a.Router(); // @route   GET api/auth\n// @desc    Retrieve auth\n// @access  Public\n\nauthRoute.get('/', function (req, res) {\n  return res.send('Auth Route');\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = (authRoute);\n\n//# sourceURL=webpack:///./routes/api/auth.ts?");
+
+/***/ }),
+
+/***/ "./routes/api/posts.ts":
+/*!*****************************!*\
+  !*** ./routes/api/posts.ts ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n\nvar postsRoute = express__WEBPACK_IMPORTED_MODULE_0___default.a.Router(); // @route   GET api/posts\n// @desc    Retrieve posts\n// @access  Public\n\npostsRoute.get('/', function (req, res) {\n  return res.send('Posts Route');\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = (postsRoute);\n\n//# sourceURL=webpack:///./routes/api/posts.ts?");
+
+/***/ }),
+
+/***/ "./routes/api/profile.ts":
+/*!*******************************!*\
+  !*** ./routes/api/profile.ts ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n\nvar profileRoute = express__WEBPACK_IMPORTED_MODULE_0___default.a.Router(); // @route   GET api/profile\n// @desc    Retrieve profile\n// @access  Public\n\nprofileRoute.get('/', function (req, res) {\n  return res.send('Profile Route');\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = (profileRoute);\n\n//# sourceURL=webpack:///./routes/api/profile.ts?");
+
+/***/ }),
+
+/***/ "./routes/api/users.ts":
+/*!*****************************!*\
+  !*** ./routes/api/users.ts ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n\nvar userRoute = express__WEBPACK_IMPORTED_MODULE_0___default.a.Router(); // @route   GET api/users\n// @desc    Retrieve list of users\n// @access  Public\n\nuserRoute.get('/', function (req, res) {\n  return res.send('User Route');\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = (userRoute);\n\n//# sourceURL=webpack:///./routes/api/users.ts?");
+
+/***/ }),
+
 /***/ "./src/server.ts":
 /*!***********************!*\
   !*** ./src/server.ts ***!
@@ -106,7 +154,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _config_db__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config/db */ \"./config/db.ts\");\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\nObject(_config_db__WEBPACK_IMPORTED_MODULE_1__[\"connectDB\"])();\napp.get('/', function (_req, res) {\n  return res.send('API Running');\n});\nvar PORT = process.env.PORT || 5000;\napp.listen(PORT, function () {\n  console.log(\"Server started on por \".concat(PORT));\n});\n\n//# sourceURL=webpack:///./src/server.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _config_db__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config/db */ \"./config/db.ts\");\n/* harmony import */ var _routes_api_users__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../routes/api/users */ \"./routes/api/users.ts\");\n/* harmony import */ var _routes_api_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../routes/api/auth */ \"./routes/api/auth.ts\");\n/* harmony import */ var _routes_api_profile__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../routes/api/profile */ \"./routes/api/profile.ts\");\n/* harmony import */ var _routes_api_posts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../routes/api/posts */ \"./routes/api/posts.ts\");\n\n\n\n\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\nObject(_config_db__WEBPACK_IMPORTED_MODULE_1__[\"connectDB\"])();\napp.get('/', function (req, res) {\n  return res.send('API Running');\n}); // Define Routes\n\napp.use('/api/users', _routes_api_users__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\napp.use('/api/auth', _routes_api_auth__WEBPACK_IMPORTED_MODULE_3__[\"default\"]);\napp.use('/api/profile', _routes_api_profile__WEBPACK_IMPORTED_MODULE_4__[\"default\"]);\napp.use('/api/posts', _routes_api_posts__WEBPACK_IMPORTED_MODULE_6__[\"default\"]);\nvar PORT = process.env.PORT || 5000;\napp.listen(PORT, function () {\n  console.log(\"Server started on por \".concat(PORT));\n});\n\n//# sourceURL=webpack:///./src/server.ts?");
 
 /***/ }),
 
