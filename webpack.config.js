@@ -45,5 +45,8 @@ module.exports = {
       excludeChunks: [ 'server' ]
     }),
     new NodemonPlugin()
-  ]
+  ],
+  resolve: {
+    extensions: ['.ts', '.js', '.json']
+  }
 }

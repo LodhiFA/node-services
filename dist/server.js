@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./config/db.ts":
+/*!**********************!*\
+  !*** ./config/db.ts ***!
+  \**********************/
+/*! exports provided: connectDB */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"connectDB\", function() { return connectDB; });\n/* harmony import */ var _babel_runtime_corejs3_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs3/regenerator */ \"@babel/runtime-corejs3/regenerator\");\n/* harmony import */ var _babel_runtime_corejs3_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_regenerator__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _babel_runtime_corejs3_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs3/helpers/asyncToGenerator */ \"@babel/runtime-corejs3/helpers/asyncToGenerator\");\n/* harmony import */ var _babel_runtime_corejs3_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var mongoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! mongoose */ \"mongoose\");\n/* harmony import */ var mongoose__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(mongoose__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! config */ \"config\");\n/* harmony import */ var config__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(config__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\nvar db = config__WEBPACK_IMPORTED_MODULE_3___default.a.get('mongoURI');\nvar connectDB = /*#__PURE__*/function () {\n  var _ref = _babel_runtime_corejs3_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_corejs3_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {\n    return _babel_runtime_corejs3_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.prev = 0;\n            _context.next = 3;\n            return mongoose__WEBPACK_IMPORTED_MODULE_2___default.a.connect(db, {\n              useNewUrlParser: true,\n              useUnifiedTopology: true\n            });\n\n          case 3:\n            console.log('MongoDB Connected ....');\n            _context.next = 10;\n            break;\n\n          case 6:\n            _context.prev = 6;\n            _context.t0 = _context[\"catch\"](0);\n            console.error(_context.t0.message);\n            process.exit(1);\n\n          case 10:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee, null, [[0, 6]]);\n  }));\n\n  return function connectDB() {\n    return _ref.apply(this, arguments);\n  };\n}();\n\n//# sourceURL=webpack:///./config/db.ts?");
+
+/***/ }),
+
 /***/ "./src/server.ts":
 /*!***********************!*\
   !*** ./src/server.ts ***!
@@ -94,7 +106,40 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\napp.get('/', function (_req, res) {\n  return res.send('API Running');\n});\nvar PORT = process.env.PORT || 5000;\napp.listen(PORT, function () {\n  console.log(\"Server started on por \".concat(PORT));\n});\n\n//# sourceURL=webpack:///./src/server.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _config_db__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config/db */ \"./config/db.ts\");\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\nObject(_config_db__WEBPACK_IMPORTED_MODULE_1__[\"connectDB\"])();\napp.get('/', function (_req, res) {\n  return res.send('API Running');\n});\nvar PORT = process.env.PORT || 5000;\napp.listen(PORT, function () {\n  console.log(\"Server started on por \".concat(PORT));\n});\n\n//# sourceURL=webpack:///./src/server.ts?");
+
+/***/ }),
+
+/***/ "@babel/runtime-corejs3/helpers/asyncToGenerator":
+/*!******************************************************************!*\
+  !*** external "@babel/runtime-corejs3/helpers/asyncToGenerator" ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"@babel/runtime-corejs3/helpers/asyncToGenerator\");\n\n//# sourceURL=webpack:///external_%22@babel/runtime-corejs3/helpers/asyncToGenerator%22?");
+
+/***/ }),
+
+/***/ "@babel/runtime-corejs3/regenerator":
+/*!*****************************************************!*\
+  !*** external "@babel/runtime-corejs3/regenerator" ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"@babel/runtime-corejs3/regenerator\");\n\n//# sourceURL=webpack:///external_%22@babel/runtime-corejs3/regenerator%22?");
+
+/***/ }),
+
+/***/ "config":
+/*!*************************!*\
+  !*** external "config" ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"config\");\n\n//# sourceURL=webpack:///external_%22config%22?");
 
 /***/ }),
 
@@ -106,6 +151,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var expr
 /***/ (function(module, exports) {
 
 eval("module.exports = require(\"express\");\n\n//# sourceURL=webpack:///external_%22express%22?");
+
+/***/ }),
+
+/***/ "mongoose":
+/*!***************************!*\
+  !*** external "mongoose" ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"mongoose\");\n\n//# sourceURL=webpack:///external_%22mongoose%22?");
 
 /***/ })
 
