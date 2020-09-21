@@ -1,13 +1,16 @@
 import express from 'express';
 import { connectDB } from '../config/db';
-import userRoute from '../routes/api/users';
-import authRoute from '../routes/api/auth';
-import profileRoute from '../routes/api/profile';
-import postsRoute from '../routes/api/posts';
+import userRoute from './routes/api/users';
+import authRoute from './routes/api/auth';
+import profileRoute from './routes/api/profile';
+import postsRoute from './routes/api/posts';
 
 const app = express(); 
 
 connectDB();
+
+// Init Middleware
+app.use(express.json());
 
 app.get('/', (req: any, res: any) => res.send('API Running'));
 
