@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"User\", function() { return User; });\n/* harmony import */ var _babel_runtime_corejs3_core_js_stable_date_now__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/date/now */ \"@babel/runtime-corejs3/core-js-stable/date/now\");\n/* harmony import */ var _babel_runtime_corejs3_core_js_stable_date_now__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_date_now__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var mongoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mongoose */ \"mongoose\");\n/* harmony import */ var mongoose__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(mongoose__WEBPACK_IMPORTED_MODULE_1__);\n\n\nvar userSchema = new mongoose__WEBPACK_IMPORTED_MODULE_1___default.a.Schema({\n  name: {\n    type: String,\n    required: true\n  },\n  email: {\n    type: String,\n    required: true,\n    unique: true\n  },\n  password: {\n    type: String,\n    required: true\n  },\n  avatar: {\n    type: String\n  },\n  date: {\n    type: Date,\n    \"default\": _babel_runtime_corejs3_core_js_stable_date_now__WEBPACK_IMPORTED_MODULE_0___default.a\n  }\n});\nvar User = mongoose__WEBPACK_IMPORTED_MODULE_1___default.a.model('user', userSchema);\n\n//# sourceURL=webpack:///./src/models/users.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"User\", function() { return User; });\n/* harmony import */ var _babel_runtime_corejs3_helpers_initializerDefineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs3/helpers/initializerDefineProperty */ \"@babel/runtime-corejs3/helpers/initializerDefineProperty\");\n/* harmony import */ var _babel_runtime_corejs3_helpers_initializerDefineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_initializerDefineProperty__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _babel_runtime_corejs3_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs3/helpers/classCallCheck */ \"@babel/runtime-corejs3/helpers/classCallCheck\");\n/* harmony import */ var _babel_runtime_corejs3_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _babel_runtime_corejs3_helpers_applyDecoratedDescriptor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs3/helpers/applyDecoratedDescriptor */ \"@babel/runtime-corejs3/helpers/applyDecoratedDescriptor\");\n/* harmony import */ var _babel_runtime_corejs3_helpers_applyDecoratedDescriptor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_applyDecoratedDescriptor__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _babel_runtime_corejs3_helpers_initializerWarningHelper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs3/helpers/initializerWarningHelper */ \"@babel/runtime-corejs3/helpers/initializerWarningHelper\");\n/* harmony import */ var _babel_runtime_corejs3_helpers_initializerWarningHelper__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_helpers_initializerWarningHelper__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _babel_runtime_corejs3_core_js_stable_date_now__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs3/core-js-stable/date/now */ \"@babel/runtime-corejs3/core-js-stable/date/now\");\n/* harmony import */ var _babel_runtime_corejs3_core_js_stable_date_now__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs3_core_js_stable_date_now__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _typegoose_typegoose__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @typegoose/typegoose */ \"@typegoose/typegoose\");\n/* harmony import */ var _typegoose_typegoose__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_typegoose_typegoose__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _typegoose_typegoose_lib_prop__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @typegoose/typegoose/lib/prop */ \"@typegoose/typegoose/lib/prop\");\n/* harmony import */ var _typegoose_typegoose_lib_prop__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_typegoose_typegoose_lib_prop__WEBPACK_IMPORTED_MODULE_6__);\n\n\n\n\n\n\nvar _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _class, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _temp;\n\n\n\nvar users = (_dec = Object(_typegoose_typegoose_lib_prop__WEBPACK_IMPORTED_MODULE_6__[\"prop\"])({\n  required: true\n}), _dec2 = Reflect.metadata(\"design:type\", String), _dec3 = Object(_typegoose_typegoose_lib_prop__WEBPACK_IMPORTED_MODULE_6__[\"prop\"])({\n  required: true,\n  unique: true\n}), _dec4 = Reflect.metadata(\"design:type\", String), _dec5 = Object(_typegoose_typegoose_lib_prop__WEBPACK_IMPORTED_MODULE_6__[\"prop\"])({\n  required: true\n}), _dec6 = Reflect.metadata(\"design:type\", String), _dec7 = Object(_typegoose_typegoose_lib_prop__WEBPACK_IMPORTED_MODULE_6__[\"prop\"])(), _dec8 = Reflect.metadata(\"design:type\", String), _dec9 = Object(_typegoose_typegoose_lib_prop__WEBPACK_IMPORTED_MODULE_6__[\"prop\"])({\n  \"default\": _babel_runtime_corejs3_core_js_stable_date_now__WEBPACK_IMPORTED_MODULE_4___default.a\n}), _dec10 = Reflect.metadata(\"design:type\", typeof Date === \"undefined\" ? Object : Date), (_class = (_temp = function users() {\n  _babel_runtime_corejs3_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, users);\n\n  _babel_runtime_corejs3_helpers_initializerDefineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, \"name\", _descriptor, this);\n\n  _babel_runtime_corejs3_helpers_initializerDefineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, \"email\", _descriptor2, this);\n\n  _babel_runtime_corejs3_helpers_initializerDefineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, \"password\", _descriptor3, this);\n\n  _babel_runtime_corejs3_helpers_initializerDefineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, \"avatar\", _descriptor4, this);\n\n  _babel_runtime_corejs3_helpers_initializerDefineProperty__WEBPACK_IMPORTED_MODULE_0___default()(this, \"date\", _descriptor5, this);\n}, _temp), (_descriptor = _babel_runtime_corejs3_helpers_applyDecoratedDescriptor__WEBPACK_IMPORTED_MODULE_2___default()(_class.prototype, \"name\", [_dec, _dec2], {\n  configurable: true,\n  enumerable: true,\n  writable: true,\n  initializer: null\n}), _descriptor2 = _babel_runtime_corejs3_helpers_applyDecoratedDescriptor__WEBPACK_IMPORTED_MODULE_2___default()(_class.prototype, \"email\", [_dec3, _dec4], {\n  configurable: true,\n  enumerable: true,\n  writable: true,\n  initializer: null\n}), _descriptor3 = _babel_runtime_corejs3_helpers_applyDecoratedDescriptor__WEBPACK_IMPORTED_MODULE_2___default()(_class.prototype, \"password\", [_dec5, _dec6], {\n  configurable: true,\n  enumerable: true,\n  writable: true,\n  initializer: null\n}), _descriptor4 = _babel_runtime_corejs3_helpers_applyDecoratedDescriptor__WEBPACK_IMPORTED_MODULE_2___default()(_class.prototype, \"avatar\", [_dec7, _dec8], {\n  configurable: true,\n  enumerable: true,\n  writable: true,\n  initializer: null\n}), _descriptor5 = _babel_runtime_corejs3_helpers_applyDecoratedDescriptor__WEBPACK_IMPORTED_MODULE_2___default()(_class.prototype, \"date\", [_dec9, _dec10], {\n  configurable: true,\n  enumerable: true,\n  writable: true,\n  initializer: null\n})), _class));\nvar User = Object(_typegoose_typegoose__WEBPACK_IMPORTED_MODULE_5__[\"getModelForClass\"])(users);\n\n//# sourceURL=webpack:///./src/models/users.ts?");
 
 /***/ }),
 
@@ -181,6 +181,17 @@ eval("module.exports = require(\"@babel/runtime-corejs3/core-js-stable/date/now\
 
 /***/ }),
 
+/***/ "@babel/runtime-corejs3/helpers/applyDecoratedDescriptor":
+/*!**************************************************************************!*\
+  !*** external "@babel/runtime-corejs3/helpers/applyDecoratedDescriptor" ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"@babel/runtime-corejs3/helpers/applyDecoratedDescriptor\");\n\n//# sourceURL=webpack:///external_%22@babel/runtime-corejs3/helpers/applyDecoratedDescriptor%22?");
+
+/***/ }),
+
 /***/ "@babel/runtime-corejs3/helpers/asyncToGenerator":
 /*!******************************************************************!*\
   !*** external "@babel/runtime-corejs3/helpers/asyncToGenerator" ***!
@@ -192,6 +203,39 @@ eval("module.exports = require(\"@babel/runtime-corejs3/helpers/asyncToGenerator
 
 /***/ }),
 
+/***/ "@babel/runtime-corejs3/helpers/classCallCheck":
+/*!****************************************************************!*\
+  !*** external "@babel/runtime-corejs3/helpers/classCallCheck" ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"@babel/runtime-corejs3/helpers/classCallCheck\");\n\n//# sourceURL=webpack:///external_%22@babel/runtime-corejs3/helpers/classCallCheck%22?");
+
+/***/ }),
+
+/***/ "@babel/runtime-corejs3/helpers/initializerDefineProperty":
+/*!***************************************************************************!*\
+  !*** external "@babel/runtime-corejs3/helpers/initializerDefineProperty" ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"@babel/runtime-corejs3/helpers/initializerDefineProperty\");\n\n//# sourceURL=webpack:///external_%22@babel/runtime-corejs3/helpers/initializerDefineProperty%22?");
+
+/***/ }),
+
+/***/ "@babel/runtime-corejs3/helpers/initializerWarningHelper":
+/*!**************************************************************************!*\
+  !*** external "@babel/runtime-corejs3/helpers/initializerWarningHelper" ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"@babel/runtime-corejs3/helpers/initializerWarningHelper\");\n\n//# sourceURL=webpack:///external_%22@babel/runtime-corejs3/helpers/initializerWarningHelper%22?");
+
+/***/ }),
+
 /***/ "@babel/runtime-corejs3/regenerator":
 /*!*****************************************************!*\
   !*** external "@babel/runtime-corejs3/regenerator" ***!
@@ -200,6 +244,28 @@ eval("module.exports = require(\"@babel/runtime-corejs3/helpers/asyncToGenerator
 /***/ (function(module, exports) {
 
 eval("module.exports = require(\"@babel/runtime-corejs3/regenerator\");\n\n//# sourceURL=webpack:///external_%22@babel/runtime-corejs3/regenerator%22?");
+
+/***/ }),
+
+/***/ "@typegoose/typegoose":
+/*!***************************************!*\
+  !*** external "@typegoose/typegoose" ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"@typegoose/typegoose\");\n\n//# sourceURL=webpack:///external_%22@typegoose/typegoose%22?");
+
+/***/ }),
+
+/***/ "@typegoose/typegoose/lib/prop":
+/*!************************************************!*\
+  !*** external "@typegoose/typegoose/lib/prop" ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"@typegoose/typegoose/lib/prop\");\n\n//# sourceURL=webpack:///external_%22@typegoose/typegoose/lib/prop%22?");
 
 /***/ }),
 

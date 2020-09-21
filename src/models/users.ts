@@ -1,26 +1,22 @@
+import { getModelForClass } from '@typegoose/typegoose';
+import { prop } from '@typegoose/typegoose/lib/prop';
 import mongoose from 'mongoose';
 
-const userSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    email: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    password: {
-        type: String,
-        required: true
-    },
-    avatar: {
-        type: String
-    },
-    date: {
-        type: Date,
-        default: Date.now
-    }
-});
+class users {
+    @prop({ required: true })
+    public name!: string;
+    
+    @prop({ required: true, unique: true })
+    public email!: string;
+    
+    @prop({ required: true })
+    public password!: string;
+    
+    @prop()
+    public avatar!: string;
+    
+    @prop({ default: Date.now })
+    public date!: Date;
+}
 
-export const User = mongoose.model('user', userSchema);
+export const User = getModelForClass(users);

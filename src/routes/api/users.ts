@@ -56,7 +56,7 @@ userRoute.post(
 
         // Encrypt password
         const salt = await bcrypt.genSalt(10);  // Number of runs
-        (user as any).password = await bcrypt.hash(password, salt);
+        user.password = await bcrypt.hash(password, salt);
 
         await user.save();
 
