@@ -1,6 +1,5 @@
 import { getModelForClass } from '@typegoose/typegoose';
 import { prop } from '@typegoose/typegoose/lib/prop';
-import mongoose from 'mongoose';
 
 class users {
     @prop({ required: true })

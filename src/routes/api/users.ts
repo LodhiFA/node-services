@@ -2,7 +2,11 @@ import express from 'express';
 import { check, validationResult } from 'express-validator';
 import gravatar from 'gravatar';
 import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+
 import { User } from '../../models/users';
+import config from 'config';
+import e from 'express';
 
 const userRoute = express.Router();
 
@@ -61,9 +65,21 @@ userRoute.post(
         await user.save();
 
         // Return jsonwebtoken
+        const payload: Object = {
+            user: {
+                id: user.id
+            }
+        };
 
+        jwt.sign(
+            payload, 
+            config.get('jwtToken'), 
+            { expiresIn: 360000 },
+            (e, token) => {
+                if (e) throw e;
+                res.json({ token });
+            });
 
-        res.send('User Registered');
     } catch(e) {
         console.log(e.message);
         res.status(500).send('Server error');
