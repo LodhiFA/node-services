@@ -1,3 +1,4 @@
+import { mongoose } from '@typegoose/typegoose';
 import express from 'express';
 import { check, validationResult } from 'express-validator';
 import { authUser } from '../../middleware/auth';
@@ -11,9 +12,7 @@ const profileRoute = express.Router();
 // @access  Private
 profileRoute.get('/me', authUser, async (req: any, res: any) => {
   try {
-    const profile = await Profile.findOne({
-      user: req.user.Id,
-    }).populate('user', ['name', 'avatar']);
+    const profile = await Profile.findOne({ user: req.user.id }).populate('user', ['name', 'avatar']);
     if (!profile) {
       return res.status(400).json({ msg: 'There is no profile for this user' });
     }
@@ -105,5 +104,40 @@ profileRoute.post(
       }
   }
 );
+
+// @route   GET api/profile
+// @desc    Get all profiles
+// @access  Public
+profileRoute.get('/', async (req: any, res: any) => {
+  try {
+    const profiles = await Profile.find().populate('user', ['name', 'avatar']);
+    res.json(profiles);
+  } catch (e) {
+    console.error(e.message);
+    res.status(500).send('Server Error');
+  }
+});
+
+// @route   GET api/profile/user/:user_id
+// @desc    Get profile by user ID
+// @access  Public
+profileRoute.get('/user/:user_id', async (req: any, res: any) => {
+  try {
+    const profile = await Profile.findOne({
+      user: req.params.user_id
+    }).populate('user', ['name', 'avatar']);
+
+    if (!profile)
+      return res.status(400).json('Profile not found');
+    
+    res.json(profile);
+  } catch (e) {
+    console.error(e.message);
+    if (e.kind == 'ObjectId') 
+      return res.status(400).json('Profile not found');
+    
+    res.status(500).send('Server Error');
+  }
+});
 
 export default profileRoute;

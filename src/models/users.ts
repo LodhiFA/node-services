@@ -1,7 +1,7 @@
 import { getModelForClass } from '@typegoose/typegoose';
 import { prop } from '@typegoose/typegoose/lib/prop';
 
-class users {
+class user {
     @prop({ required: true })
     public name!: string;
     
@@ -18,4 +18,4 @@ class users {
     public date!: Date;
 }
 
-export const User = getModelForClass(users);
+export const User = getModelForClass(user);
