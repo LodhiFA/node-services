@@ -89,10 +89,10 @@ class profile {
   @prop()
   public githubusername!: string;
 
-  @prop({ ref: 'experience', type: [experience] })
+  @prop({ type: [experience] })
   public experience!: experience[];
 
-  @prop({ ref: 'education', type: [education] })
+  @prop({ type: [education] })
   public education!: education[];
 
   @prop()
