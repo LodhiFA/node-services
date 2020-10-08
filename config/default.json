@@ -1,4 +1,6 @@
 {
     "mongoURI": "mongodb+srv://lodhi22:lodhi22@devconnector.vswm6.mongodb.net/test?retryWrites=true&w=majority",
-    "jwtToken": "mysecrettoken"
+    "jwtToken": "mysecrettoken",
+    "githubClientId": "b6f0f2bb7a23c7c922b9",
+    "githubSecret": "7fba4658ae3ba9548b9a140767ccfebdd0db1c44"
 }
