@@ -1,6 +1,7 @@
-import { getModelForClass } from '@typegoose/typegoose'
+import { getModelForClass, modelOptions } from '@typegoose/typegoose'
 import { prop } from '@typegoose/typegoose/lib/prop'
 
+@modelOptions({ schemaOptions: { collection: 'users' } })
 class user {
     @prop({ required: true })
     public name!: string
