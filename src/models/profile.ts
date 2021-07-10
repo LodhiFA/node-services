@@ -1,105 +1,105 @@
-import { getModelForClass, mongoose, Ref } from '@typegoose/typegoose';
-import { prop } from '@typegoose/typegoose/lib/prop';
+import { getModelForClass, mongoose, Ref } from '@typegoose/typegoose'
+import { prop } from '@typegoose/typegoose/lib/prop'
 
 class experience {
   @prop({ required: true })
-  public title!: string;
+  public title!: string
 
   @prop({ required: true })
-  public company!: string;
+  public company!: string
 
   @prop()
-  public location!: string;
+  public location!: string
 
   @prop({ required: true })
-  public from!: Date;
+  public from!: Date
 
   @prop()
-  public to!: Date;
+  public to!: Date
 
   @prop({ default: false })
-  public current!: boolean;
+  public current!: boolean
 
   @prop()
-  public description!: string;
+  public description!: string
 }
 
 class education {
   @prop({ required: true })
-  public school!: string;
+  public school!: string
 
   @prop({ required: true })
-  public degree!: string;
+  public degree!: string
 
   @prop({ required: true })
-  public fieldofstudy!: string;
+  public fieldofstudy!: string
 
   @prop({ required: true })
-  public from!: Date;
+  public from!: Date
 
   @prop()
-  public to!: Date;
+  public to!: Date
 
   @prop({ default: false })
-  public current!: boolean;
+  public current!: boolean
 
   @prop()
-  public description!: string;
+  public description!: string
 }
 
 class social {
   @prop()
-  public youtube!: string;
+  public youtube!: string
 
   @prop()
-  public twitter!: string;
+  public twitter!: string
 
   @prop()
-  public facebook!: string;
+  public facebook!: string
 
   @prop()
-  public linkedin!: string;
+  public linkedin!: string
 
   @prop()
-  public instagram!: string;
+  public instagram!: string
 }
 
 class profile {
   @prop({ ref: 'user' })
-  public user!: mongoose.Schema.Types.ObjectId;
+  public user!: mongoose.Schema.Types.ObjectId
 
   @prop()
-  public company!: string;
+  public company!: string
 
   @prop()
-  public website!: string;
+  public website!: string
 
   @prop()
-  public location!: string;
+  public location!: string
 
   @prop({ required: true })
-  public status!: string;
+  public status!: string
 
   @prop({ required: true, type: [String] })
-  public skills!: string[];
+  public skills!: string[]
 
   @prop()
-  public bio!: string;
+  public bio!: string
 
   @prop()
-  public githubusername!: string;
+  public githubusername!: string
 
   @prop({ type: [experience] })
-  public experience!: experience[];
+  public experience!: experience[]
 
   @prop({ type: [education] })
-  public education!: education[];
+  public education!: education[]
 
   @prop()
-  public social!: social;
+  public social!: social
 
   @prop({ default: Date.now })
-  public date!: Date;
+  public date!: Date
 }
 
-export const Profile = getModelForClass(profile);
+export const Profile = getModelForClass(profile)

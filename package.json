@@ -4,7 +4,7 @@
   "description": "Udemy course services",
   "main": "server.js",
   "scripts": {
-    "start": "webpack --mode development --watch",
+    "dev": "webpack --mode development --watch",
     "build": "webpack --mode production"
   },
   "author": "LodhiFA <f.lodhi22@gmail.com>",

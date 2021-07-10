@@ -1,21 +1,21 @@
-import { getModelForClass } from '@typegoose/typegoose';
-import { prop } from '@typegoose/typegoose/lib/prop';
+import { getModelForClass } from '@typegoose/typegoose'
+import { prop } from '@typegoose/typegoose/lib/prop'
 
 class user {
     @prop({ required: true })
-    public name!: string;
+    public name!: string
     
     @prop({ required: true, unique: true })
-    public email!: string;
+    public email!: string
     
     @prop({ required: true })
-    public password!: string;
+    public password!: string
     
     @prop()
-    public avatar!: string;
+    public avatar!: string
     
     @prop({ default: Date.now })
-    public date!: Date;
+    public date!: Date
 }
 
-export const User = getModelForClass(user);
+export const User = getModelForClass(user)

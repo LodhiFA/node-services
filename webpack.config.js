@@ -1,10 +1,10 @@
-const path = require('path');
-const webpack = require('webpack');
-const nodeExternals = require('webpack-node-externals');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const NodemonPlugin = require('nodemon-webpack-plugin');
+const path = require('path')
+const nodeExternals = require('webpack-node-externals')
+const HtmlWebPackPlugin = require("html-webpack-plugin")
+const NodemonPlugin = require('nodemon-webpack-plugin')
 
 module.exports = {
+  devtool: "source-map",
   entry: {
     server: './src/server.ts',
   },
