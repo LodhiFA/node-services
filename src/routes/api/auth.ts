@@ -15,7 +15,7 @@ authRoute.get('/', authUser, async (req: any, res: any) => {
   try {
     const user = await User.findById(req.user.id).select('-password')
     res.json(user)
-  } catch (e) {
+  } catch (e: any) {
     console.error(e.message)
     res.status(500).send('Server Error')
   }
@@ -82,7 +82,7 @@ authRoute.post(
           res.json({ token })
         }
       )
-    } catch (e) {
+    } catch (e: any) {
       console.log(e.message)
       res.status(500).send('Server error')
     }

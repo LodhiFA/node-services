@@ -79,7 +79,7 @@ userRoute.post(
                 res.json({ token })
             })
 
-    } catch(e) {
+    } catch(e: any) {
         console.log(e.message)
         res.status(500).send('Server error')
     }
